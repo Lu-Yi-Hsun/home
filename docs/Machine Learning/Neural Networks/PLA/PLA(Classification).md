@@ -287,9 +287,12 @@ $$
 \end{aligned}
 $$
 
+
+
 !!! note
-    所以$W_{f}^{T}W_{t+1}>W_{f}^{T}W_{t}$
-    意思是當""向量長度一樣""的時候,兩個向量內積越來越大代表越接近,也就證明了$W_{t+1}$越靠近答案$W_{f}$
+    所以${W_f}^{T}W_{t+1} > {W_f}^{T}W_t$意思是當""向量長度一樣""的時候,兩個向量內積越來越大代表越接近,也就證明了$W_{t+1}$越靠近答案$W_f$
+
+
 
 ---
 ###Proof 2 
@@ -307,8 +310,14 @@ $$
 ### Finally Proof
 
 !!! question
-    $$\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\geq ?$$
+    $\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\geq ?$
+   
     
+!!! question
+     $1\frac{1}{2}$ $\frac{1}{a^{5} + 1}$
+
+
+
 By Proof  1:
 
 $$
@@ -338,11 +347,10 @@ $$
  \|W_{X}\|^2\leq X*\underset{n}{max}\|x_{n}\|^2
 \end{cases}
 $$
+
 !!! info "When these two vector's angle is close to 0"
-     
-    
     $$
-    \frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\approx 1
+    \frac{ {W_{f}}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\approx 1
     $$
     
     

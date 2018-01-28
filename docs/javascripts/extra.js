@@ -3,6 +3,7 @@ window.MathJax = {
     inlineMath: [ ["\\(","\\)"] ],
     displayMath: [ ["\\[","\\]"] ]
   },
+  jax: ["input/TeX", "output/SVG"],
   TeX: {
     TagSide: "right",
     TagIndent: ".8em",
@@ -14,6 +15,12 @@ window.MathJax = {
       fonts: "STIXGeneral,'Arial Unicode MS'"
     }
   },
+
+ 
+  
+
+  
+
   displayAlign: "left",
   showProcessingMessages: false,
   messageStyle: "none"

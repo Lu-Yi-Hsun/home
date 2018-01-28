@@ -1,27 +1,10 @@
-window.MathJax = {
-  tex2jax: {
-    inlineMath: [ ["\\(","\\)"] ],
-    displayMath: [ ["\\[","\\]"] ]
-  },
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
   jax: ["input/TeX", "output/SVG"],
-  TeX: {
-    TagSide: "right",
-    TagIndent: ".8em",
-    MultLineWidth: "85%",
-    equationNumbers: {
-      autoNumber: "AMS",
-    },
-    unicode: {
-      fonts: "STIXGeneral,'Arial Unicode MS'"
-    }
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true
   },
-
- 
-  
-
-  
-
-  displayAlign: "left",
-  showProcessingMessages: false,
-  messageStyle: "none"
-};
+  "HTML-CSS": { availableFonts: ["TeX"] }
+});

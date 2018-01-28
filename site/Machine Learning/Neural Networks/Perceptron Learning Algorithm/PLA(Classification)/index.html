@@ -1,0 +1,1296 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.1">
+    
+    
+      
+        <title>PLA(Classification) - Lu Yi Hsun</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.41c6761c.css">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="Lu Yi Hsun" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Lu Yi Hsun
+              </span>
+              <span class="md-header-nav__topic">
+                PLA(Classification)
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/Lu-Yi-Hsun/ML" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Lu-Yi-Hsun/home
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Lu Yi Hsun
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Lu-Yi-Hsun/ML" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Lu-Yi-Hsun/home
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Crypto currency
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Crypto currency
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Crypto currency/investment/" title="investment" class="md-nav__link">
+      investment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Bitcoin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Bitcoin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Crypto currency/Bitcoin/Bitcoin paper/" title="Bitcoin paper" class="md-nav__link">
+      Bitcoin paper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Crypto currency/Bitcoin/Block Chain/" title="Block Chain" class="md-nav__link">
+      Block Chain
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Machine Learning
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Machine Learning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Neural Networks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Neural Networks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+    
+    <label class="md-nav__link" for="nav-3-2-2">
+      CNN
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-2">
+        CNN
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CNN/CNN/" title="CNN" class="md-nav__link">
+      CNN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-2-2" type="checkbox" id="nav-3-2-2-2">
+    
+    <label class="md-nav__link" for="nav-3-2-2-2">
+      Sample
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-2-2-2">
+        Sample
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CNN/sample/Devanagari Handwritten Character/" title="Devanagari Handwritten Character" class="md-nav__link">
+      Devanagari Handwritten Character
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+    
+    <label class="md-nav__link" for="nav-3-2-3">
+      Multilayer perceptron
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-3">
+        Multilayer perceptron
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Multilayer perceptron/MLP(Regression)/" title="MLP(Regression)" class="md-nav__link">
+      MLP(Regression)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4" checked>
+    
+    <label class="md-nav__link" for="nav-3-2-4">
+      Perceptron Learning Algorithm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-4">
+        Perceptron Learning Algorithm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        PLA(Classification)
+      </label>
+    
+    <a href="./" title="PLA(Classification)" class="md-nav__link md-nav__link--active">
+      PLA(Classification)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#type-of-this-sample" title="Type Of this Sample" class="md-nav__link">
+    Type Of this Sample
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" title="Algorithm" class="md-nav__link">
+    Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-pla-classification" title="Implement PLA (Classification)" class="md-nav__link">
+    Implement PLA (Classification)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-version" title="sample version" class="md-nav__link">
+    sample version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizer-version" title="Optimizer Version" class="md-nav__link">
+    Optimizer Version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pla" title="證明線性可分時PLA演算法會停" class="md-nav__link">
+    證明線性可分時PLA演算法會停
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="符號解釋" class="md-nav__link">
+    符號解釋
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-1" title="Proof 1" class="md-nav__link">
+    Proof 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-2" title="Proof 2" class="md-nav__link">
+    Proof 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finally-proof" title="Finally Proof" class="md-nav__link">
+    Finally Proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="練習題" class="md-nav__link">
+    練習題
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PLA(Regression)/" title="PLA(Regression)" class="md-nav__link">
+      PLA(Regression)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#type-of-this-sample" title="Type Of this Sample" class="md-nav__link">
+    Type Of this Sample
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" title="Algorithm" class="md-nav__link">
+    Algorithm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-pla-classification" title="Implement PLA (Classification)" class="md-nav__link">
+    Implement PLA (Classification)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-version" title="sample version" class="md-nav__link">
+    sample version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizer-version" title="Optimizer Version" class="md-nav__link">
+    Optimizer Version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pla" title="證明線性可分時PLA演算法會停" class="md-nav__link">
+    證明線性可分時PLA演算法會停
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="符號解釋" class="md-nav__link">
+    符號解釋
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-1" title="Proof 1" class="md-nav__link">
+    Proof 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-2" title="Proof 2" class="md-nav__link">
+    Proof 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finally-proof" title="Finally Proof" class="md-nav__link">
+    Finally Proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" title="Conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="練習題" class="md-nav__link">
+    練習題
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="placlassification">PLA(Classification)<a class="headerlink" href="#placlassification" title="Permanent link">&para;</a></h1>
+<p>Perceptron Learning Algorithm</p>
+<h2 id="type-of-this-sample">Type Of this Sample<a class="headerlink" href="#type-of-this-sample" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">Output Space</th>
+<th align="center">Data Label</th>
+<th align="center">Protocol</th>
+<th align="center">Input Space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Binary Classification</td>
+<td align="center">Supervised</td>
+<td align="center">Online</td>
+<td align="center">Raw</td>
+</tr>
+</tbody>
+</table>
+<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">找到一條線能分開兩種結果</th>
+<th align="center">如何修改線</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../../../../images/figure_1.png" /></td>
+<td align="center"><img alt="" src="../../../../images/RUNXN76.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>可以容錯是pla變形演算法叫pocket</p>
+<h2 id="implement-pla-classification">Implement PLA (Classification)<a class="headerlink" href="#implement-pla-classification" title="Permanent link">&para;</a></h2>
+<h3 id="sample-version">sample version<a class="headerlink" href="#sample-version" title="Permanent link">&para;</a></h3>
+<details class="note"><summary>Code</summary><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c1">#網路上找的dataset 可以線性分割</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">1</span><span class="p">)])</span>
+<span class="c1"># 1 mean to display -c/b if c=0 i was error</span>
+<span class="c1"># ax+by+c=0</span>
+<span class="c1">#y=(-a/b)x+(-c/b)</span>
+<span class="c1">#</span>
+<span class="c1">#判斷有沒有分類錯誤，並列印錯誤率</span>
+
+<span class="k">def</span> <span class="nf">check_error</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">error</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span> <span class="o">!=</span> <span class="n">s</span><span class="p">:</span>
+            <span class="c1">#帶入ax+by+c=0 如果符號不相等代表有錯誤</span>
+
+            <span class="c1"># T transpose</span>
+            <span class="n">result</span> <span class="o">=</span>  <span class="n">x</span><span class="p">,</span> <span class="n">s</span>
+            <span class="n">error</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span>  <span class="p">(</span><span class="s2">&quot;error=</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1">#PLA演算法實作</span>
+<span class="c1">#Cyclic PLA</span>
+<span class="k">def</span> <span class="nf">pla</span><span class="p">(</span><span class="n">dataset</span><span class="p">):</span>
+
+    <span class="c1">#ax+by+c=0 線性方程式的法向量</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="c1">#法向量</span>
+    <span class="n">index</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">while</span> <span class="n">check_error</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+
+        <span class="n">x</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">check_error</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span>
+<span class="hll">        <span class="n">w</span> <span class="o">+=</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="c1">#Algorithm kernel</span>
+</span>        <span class="c1">#fig by algorithm(1).md</span>
+        <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">w</span>
+
+
+<span class="k">def</span> <span class="nf">print_image</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+
+    <span class="c1">#畫圖</span>
+    <span class="n">ps</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">]</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">]</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+    <span class="c1">#111 is control code 1</span>
+    <span class="c1">#These are subplot grid parameters encoded as a single integer. For example, &quot;111&quot; means &quot;1x1 grid, first subplot&quot; and &quot;234&quot; means &quot;2x3 grid, 4th subplot&quot;.</span>
+    <span class="c1">#dataset前半後半已經分割好 直接畫就是</span>
+    <span class="n">index</span><span class="o">=</span><span class="mi">0</span>
+
+    <span class="n">max_x</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">min_x</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
+        <span class="c1">#print(index)</span>
+        <span class="k">if</span> <span class="n">v</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">v</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">if</span> <span class="n">max_x</span><span class="o">&lt;</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">max_x</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">min_x</span><span class="o">&gt;</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">min_x</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span>
+
+    <span class="n">l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">min_x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">max_x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1">#define the line x-axis size</span>
+    <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">w</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="o">-</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">w</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="c1">#a=斜率 b常數</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">l</span> <span class="o">+</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">w</span> <span class="o">=</span> <span class="n">pla</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">print_image</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</details><h3 id="optimizer-version">Optimizer Version<a class="headerlink" href="#optimizer-version" title="Permanent link">&para;</a></h3>
+<p>耗時&#8531;</p>
+<details class="note"><summary>Code</summary><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="c1">#網路上找的dataset 可以線性分割</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">1</span><span class="p">)])</span>
+<span class="c1"># 1 mean to display -c/b if c=0 i was error</span>
+<span class="c1"># ax+by+c=0</span>
+<span class="c1">#y=(-a/b)x+(-c/b)</span>
+<span class="c1">#</span>
+<span class="c1">#判斷有沒有分類錯誤，並列印錯誤率</span>
+<span class="n">bad</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">def</span> <span class="nf">check_error</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">result</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">error</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span> <span class="o">!=</span> <span class="n">s</span><span class="p">:</span>
+            <span class="c1">#帶入ax+by+c=0 如果符號不相等代表有錯誤</span>
+
+            <span class="c1"># T transpose</span>
+            <span class="n">tem</span><span class="o">=</span><span class="p">[]</span>
+            <span class="n">tem</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+            <span class="n">tem</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tem</span><span class="p">)</span>
+
+            <span class="n">error</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span>  <span class="p">(</span><span class="s2">&quot;error=</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)))</span>
+    <span class="n">bad</span><span class="o">=</span><span class="n">error</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">error</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">=</span><span class="bp">None</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="c1">#優化區塊1 每次選擇的錯誤用隨機所以不會一樣</span>
+<span class="c1">##############################################</span>
+<span class="hll">    <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">error</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+</span>
+<span class="c1">#PLA演算法實作</span>
+<span class="c1">#Cyclic PLA</span>
+<span class="k">def</span> <span class="nf">pla</span><span class="p">(</span><span class="n">dataset</span><span class="p">):</span>
+
+    <span class="c1">#ax+by+c=0 線性方程式</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">,</span><span class="n">plt</span><span class="o">=</span><span class="n">print_image</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+    <span class="c1">#print (w)</span>
+
+    <span class="n">index</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">while</span> <span class="n">check_error</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+
+        <span class="n">x</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">check_error</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span>
+        <span class="c1">##優化區塊2 把baise用隨機 讓它變動快點</span>
+<span class="hll">        <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">bad</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</span>        <span class="c1">#############################################</span>
+        <span class="n">w</span> <span class="o">+=</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+        <span class="c1">#define the line x-axis size</span>
+        <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">w</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="o">-</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">w</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="c1">#a=斜率 b常數</span>
+        <span class="n">lines</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">l</span> <span class="o">+</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+        <span class="c1">#plt.pause(0.1)</span>
+
+        <span class="k">print</span> <span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;all run circel&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">w</span>
+
+
+<span class="k">def</span> <span class="nf">print_image</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+
+    <span class="c1">#畫圖</span>
+    <span class="n">ps</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">]</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">]</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+    <span class="c1">#111 is control code 1</span>
+    <span class="c1">#These are subplot grid parameters encoded as a single integer. For example, &quot;111&quot; means &quot;1x1 grid, first subplot&quot; and &quot;234&quot; means &quot;2x3 grid, 4th subplot&quot;.</span>
+    <span class="c1">#dataset前半後半已經分割好 直接畫就是</span>
+    <span class="n">index</span><span class="o">=</span><span class="mi">0</span>
+
+    <span class="n">max_x</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">min_x</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
+        <span class="c1">#print(index)</span>
+        <span class="k">if</span> <span class="n">v</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">v</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">if</span> <span class="n">max_x</span><span class="o">&lt;</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">max_x</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">min_x</span><span class="o">&gt;</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">min_x</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span>
+
+    <span class="n">l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">min_x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">max_x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1">#define the line x-axis size</span>
+    <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">w</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="o">-</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">w</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="c1">#a=斜率 b常數</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">l</span> <span class="o">+</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">ax1</span><span class="p">,</span><span class="n">plt</span>
+
+<span class="n">w</span> <span class="o">=</span> <span class="n">pla</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">print_image</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</details><hr />
+<h2 id="pla">證明線性可分時PLA演算法會停<a class="headerlink" href="#pla" title="Permanent link">&para;</a></h2>
+<p><a href="https://rhadow.github.io/2016/02/24/ml-lecture-2/">參考網路教學</a></p>
+<div class="admonition info">
+<p class="admonition-title">pla停不下來 有兩個原因</p>
+<ul>
+<li>還沒跑夠</li>
+<li>非線性可分</li>
+</ul>
+</div>
+<p><img alt="" src="../../../../assets/擷取選取區域_049.png" /></p>
+<h3 id="_1">符號解釋<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span><span class="MathJax_Preview">W_{f}^{T}=</span><script type="math/tex">W_{f}^{T}=</script></span>真實想求的函數(通常未知)</li>
+<li><span><span class="MathJax_Preview">W_{X}=</span><script type="math/tex">W_{X}=</script></span>非常"接近答案"的函數</li>
+<li><span><span class="MathJax_Preview">\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|} \leq 1</span><script type="math/tex">\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|} \leq 1</script></span>兩個正規化向量的內積最大為1</li>
+<li><span><span class="MathJax_Preview">W_{t}=</span><script type="math/tex">W_{t}=</script></span>某一時間點的答案</li>
+<li><span><span class="MathJax_Preview">W_{t+1}=</span><script type="math/tex">W_{t+1}=</script></span>該時間點更新後的答案</li>
+<li><span><span class="MathJax_Preview">y_{n}= {1,-1}</span><script type="math/tex">y_{n}= {1,-1}</script></span></li>
+<li><span><span class="MathJax_Preview">y=sing(ax+b)</span><script type="math/tex">y=sing(ax+b)</script></span>改寫成<span><span class="MathJax_Preview">y_{n}=sing(W_{f}^{T}x_{n})</span><script type="math/tex">y_{n}=sing(W_{f}^{T}x_{n})</script></span></li>
+<li><span><span class="MathJax_Preview">W_{t+1}=\color{#0000FF}{W_{t}+y_{n(t)}x_{n(t)}}</span><script type="math/tex">W_{t+1}=\color{#0000FF}{W_{t}+y_{n(t)}x_{n(t)}}</script></span>修改向量的演算法核心</li>
+<li><span><span class="MathJax_Preview">X=</span><script type="math/tex">X=</script></span>總共需要修改的次數</li>
+</ul>
+<hr />
+<h3 id="proof-1">Proof 1<a class="headerlink" href="#proof-1" title="Permanent link">&para;</a></h3>
+<p>已知<span><span class="MathJax_Preview">\color{#7B68EE}{y_{n(t)}W_{f}^{T}x_{n(t)}}\geq \color{#007799}{\underset{n}{min}~y_{n}W_{f}^{T}x_{n}}&gt;0</span><script type="math/tex">\color{#7B68EE}{y_{n(t)}W_{f}^{T}x_{n(t)}}\geq \color{#007799}{\underset{n}{min}~y_{n}W_{f}^{T}x_{n}}>0</script></span>因為線不能碰到點</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+    W_{f}^{T}W_{t+1}&amp;=W_{f}^{T}(\color{#0000FF}{W_{t}+y_{n(t)}x_{n(t)}}) \\
+   &amp;=W_{f}^{T}W_{t}+\color{#7B68EE}{W_{f}^{T}y_{n(t)}x_{n(t)}} \\
+    &amp;\geq W_{f}^{T}W_{t}+\color{#007799}{\underset{n}{min}~y_{n}W_{f}^{T}x_{n}}\\
+    &amp;&gt;W_{f}^{T}W_{t}
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    W_{f}^{T}W_{t+1}&=W_{f}^{T}(\color{#0000FF}{W_{t}+y_{n(t)}x_{n(t)}}) \\
+   &=W_{f}^{T}W_{t}+\color{#7B68EE}{W_{f}^{T}y_{n(t)}x_{n(t)}} \\
+    &\geq W_{f}^{T}W_{t}+\color{#007799}{\underset{n}{min}~y_{n}W_{f}^{T}x_{n}}\\
+    &>W_{f}^{T}W_{t}
+\end{aligned}
+</script>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>所以<span><span class="MathJax_Preview">W_{f}^{T}W_{t+1}&gt;W_{f}^{T}W_{t}</span><script type="math/tex">W_{f}^{T}W_{t+1}>W_{f}^{T}W_{t}</script></span>
+意思是當""向量長度一樣""的時候,兩個向量內積越來越大代表越接近,也就證明了<span><span class="MathJax_Preview">W_{t+1}</span><script type="math/tex">W_{t+1}</script></span>越靠近答案<span><span class="MathJax_Preview">W_{f}</span><script type="math/tex">W_{f}</script></span></p>
+</div>
+<hr />
+<h3 id="proof-2">Proof 2<a class="headerlink" href="#proof-2" title="Permanent link">&para;</a></h3>
+<p>已知<span><span class="MathJax_Preview">y_{n(t)}W_{t}^Tx_{n(t)}\leq0</span><script type="math/tex">y_{n(t)}W_{t}^Tx_{n(t)}\leq0</script></span>,因為<span><span class="MathJax_Preview">W_{t}^T</span><script type="math/tex">W_{t}^T</script></span>有錯所以正負號跟<span><span class="MathJax_Preview">y_{n(t)}</span><script type="math/tex">y_{n(t)}</script></span>一定不同</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\| W_{t+1} \|^2&amp;=\|W_{t}+y_{n(t)}x_{n(t)}\|^2 \\
+&amp;=\|W_{t}\|^2+2y_{n(t)}W_{t}^{T}x_{n(t)}+\|y_{n(t)}x_{n(t)}\|^2\\
+&amp;\leq \|W_{t}\|^2+0+\|y_{n(t)}x_{n(t)}\|^2\\
+&amp;\leq \|W_{t}\|^2+\underset{n}{max}\|x_{n}\|^2
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\| W_{t+1} \|^2&=\|W_{t}+y_{n(t)}x_{n(t)}\|^2 \\
+&=\|W_{t}\|^2+2y_{n(t)}W_{t}^{T}x_{n(t)}+\|y_{n(t)}x_{n(t)}\|^2\\
+&\leq \|W_{t}\|^2+0+\|y_{n(t)}x_{n(t)}\|^2\\
+&\leq \|W_{t}\|^2+\underset{n}{max}\|x_{n}\|^2
+\end{aligned}
+</script>
+</div>
+<hr />
+<h3 id="finally-proof">Finally Proof<a class="headerlink" href="#finally-proof" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<div>
+<div class="MathJax_Preview">\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\geq ?</div>
+<script type="math/tex; mode=display">\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\geq ?</script>
+</div>
+</div>
+<p>By Proof  1:</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+W_{f}^{T}W_{X}&amp;\geq W_{f}^{T}W_{X-1}+\underset{n}{min}~y_{n}W_{f}^{T}x_{n}\\
+&amp;\geq W_{f}^{T}W_{0}+X*\underset{n}{min}~y_{n}W_{f}^{T}x_{n}\\
+&amp;\geq X*\underset{n}{min}~y_{n}W_{f}^{T}x_{n}
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+W_{f}^{T}W_{X}&\geq W_{f}^{T}W_{X-1}+\underset{n}{min}~y_{n}W_{f}^{T}x_{n}\\
+&\geq W_{f}^{T}W_{0}+X*\underset{n}{min}~y_{n}W_{f}^{T}x_{n}\\
+&\geq X*\underset{n}{min}~y_{n}W_{f}^{T}x_{n}
+\end{aligned}
+</script>
+</div>
+<p>By Proof  2:</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\|W_{X}\|^2&amp;\leq \|W_{X-1}\|^2+\underset{n}{max}\|x_{n}\|^2\\
+&amp;\leq \|W_{0}\|^2+X*\underset{n}{max}\|x_{n}\|^2\\
+&amp;\leq X*\underset{n}{max}\|x_{n}\|^2
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\|W_{X}\|^2&\leq \|W_{X-1}\|^2+\underset{n}{max}\|x_{n}\|^2\\
+&\leq \|W_{0}\|^2+X*\underset{n}{max}\|x_{n}\|^2\\
+&\leq X*\underset{n}{max}\|x_{n}\|^2
+\end{aligned}
+</script>
+</div>
+<p>We have</p>
+<div class="admonition info">
+<p class="admonition-title">When these two vector's angle is close to 0</p>
+<div>
+<div class="MathJax_Preview">
+\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\approx 1
+</div>
+<script type="math/tex; mode=display">
+\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\approx 1
+</script>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Answer</p>
+<div>
+<div class="MathJax_Preview">
+\begin{aligned}
+\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}&amp;\geq \frac{X*\underset{n}{min}~y_{n}W_{f}^{T}x_{n}}{\|W_{f}\|\sqrt[]{X}*\underset{n}{max}\|x_{n}\|}\\
+1&amp;\geq \sqrt[]{X} *\frac{\underset{n}{min}~y_{n}W_{f}^{T}x_{n}}{\|W_{f}\| * \underset{n}{max}\|x_{n}\|}
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}&\geq \frac{X*\underset{n}{min}~y_{n}W_{f}^{T}x_{n}}{\|W_{f}\|\sqrt[]{X}*\underset{n}{max}\|x_{n}\|}\\
+1&\geq \sqrt[]{X} *\frac{\underset{n}{min}~y_{n}W_{f}^{T}x_{n}}{\|W_{f}\| * \underset{n}{max}\|x_{n}\|}
+\end{aligned}
+</script>
+</div>
+</div>
+<hr />
+<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
+<p>"So we know PLA Algorithm have upper bound of runing time <span><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>"</p>
+<div>
+<div class="MathJax_Preview">
+{(\frac{\|W_{f}\| * \underset{n}{max}\|x_{n}\|}{\underset{n}{min}~y_{n}W_{f}^{T}x_{n}})}^2 \geq X
+</div>
+<script type="math/tex; mode=display">
+{(\frac{\|W_{f}\| * \underset{n}{max}\|x_{n}\|}{\underset{n}{min}~y_{n}W_{f}^{T}x_{n}})}^2 \geq X
+</script>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">該證明實務上的缺點</p>
+<p>公式算不出多久會停 因為<span><span class="MathJax_Preview">W_{f}是未知的</span><script type="math/tex">W_{f}是未知的</script></span> ,我們只證明出 當線性可分時 pla會停 有上限, 但上限多少不知道</p>
+</div>
+<h3 id="_2">練習題<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><img alt="lose image" src="../../../../images/pla_fun_time.jpg" /></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Multilayer perceptron/MLP(Regression)/" title="MLP(Regression)" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                MLP(Regression)
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../PLA(Regression)/" title="PLA(Regression)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                PLA(Regression)
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/Lu-Yi-Hsun/" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://www.facebook.com/profile.php?id=100001559307331" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.6cdc17f0.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

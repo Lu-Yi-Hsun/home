@@ -1,13 +1,13 @@
- 
+  
  
 from __future__ import print_function
 import tensorflow as tf
 #from tensorflow.examples.tutorials.mnist import input_data
 import numpy as np
+import math
 #  
 #mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 
- 
 def str_to_numpy(f_strr):
     strr=f_strr.read()
     strr2=strr.split("\n")
@@ -60,6 +60,7 @@ def Swish(input):
 # define placeholder for inputs to network
 xs = tf.placeholder(tf.float32, [None, 784])#/255.   # 28x28
 ys = tf.placeholder(tf.float32, [None, 46])
+LearningRate=tf.placeholder(tf.float32)
 keep_prob = tf.placeholder(tf.float32)
 x_image = tf.reshape(xs, [-1, 28, 28, 1])
 # print(x_image.shape)  # [n_samples, 28,28,1]
@@ -84,8 +85,8 @@ h_conv2 = Swish(conv2d(h_pool1, W_conv2) + b_conv2) ##swish
 h_pool2 = max_pool_2x2(h_conv2)                                         # output size 7x7x64
 
 ## fc1 layer ##
-W_fc1 = weight_variable([7*7*64, 1024])
-b_fc1 = bias_variable([1024])
+W_fc1 = weight_variable([7*7*64, 1400])
+b_fc1 = bias_variable([1400])
 # [n_samples, 7, 7, 64] ->> [n_samples, 7*7*64]
 h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*64])
 
@@ -95,7 +96,7 @@ h_fc1 = Swish(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)##swish
 h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
 
 ## fc2 layer ##
-W_fc2 = weight_variable([1024, 46])
+W_fc2 = weight_variable([1400, 46])
 b_fc2 = bias_variable([46])
 prediction = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)
 
@@ -103,7 +104,10 @@ prediction = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)
 # the error between prediction and real data
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(ys * tf.log(prediction),
                                               reduction_indices=[1]))       # loss
-train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
+
+
+#print(ss)
+train_step = tf.train.AdamOptimizer(LearningRate).minimize(cross_entropy)
 
 sess = tf.Session()
 # important step
@@ -118,7 +122,7 @@ sess.run(init)
 
  
 
- 
+
 #input train data
 f_train_data=open('train_data.ml','r')
 f_train_label=open('train_label.ml','r')
@@ -144,18 +148,20 @@ test_ys=str_to_numpy(f_test_label)
 
  
 
+def fu(x):
+  #return 1 / (1 + 99999999*math.exp(-15*x))
+  return math.exp(-24+13*x)
 
 print("開始做深度學習")
 batch_size=1000#硬體夠好才能調高
-
+lr=1e-4
 head=0
 end=batch_size
 row,col=train_xs.shape
 batch_index=0
-for i in range(1000):
+for i in range(100000):
     #batch_xs, batch_ys = mnist.train.next_batch(100)
-     
-    sess.run(train_step, feed_dict={xs: train_xs[head:end,], ys: train_ys[head:end,], keep_prob: 0.5})
+    sess.run(train_step, feed_dict={xs: train_xs[head:end,], ys: train_ys[head:end,],LearningRate:lr, keep_prob: 0.5})
     #要批次處理的point
     if end==row:
         head=0
@@ -170,8 +176,12 @@ for i in range(1000):
     else:
         end=(batch_index+2)*(batch_size)
     batch_index=batch_index+1
+    #lr=fu((1/compute_accuracy(test_xs,test_ys)))*1e-3
     #顯示準確度
     if i % 50 == 0:
-        #print(head,end)
-        print(compute_accuracy(test_xs,test_ys))
+        if compute_accuracy(test_xs,test_ys)>0.97:
+         lr=1e-6
+        else:
+         lr=1e-3
+        print(compute_accuracy(test_xs,test_ys),sess.run(cross_entropy,feed_dict={xs: train_xs[head:end,], ys: train_ys[head:end,], keep_prob: 0.5}),sess.run(LearningRate, feed_dict={xs: train_xs[head:end,], ys: train_ys[head:end,],LearningRate:lr, keep_prob: 0.5}))
     

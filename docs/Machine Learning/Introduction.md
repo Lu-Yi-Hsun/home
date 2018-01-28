@@ -387,7 +387,11 @@ $\mu\implies E_{out}(h)$
 ![](/images/HF3.JPG)  
 題目:要符合E$\tiny{in}$和E$\tiny{out}$誤差超過0.1($\epsilon$)的機率小於等於0.05($\delta$)hypothesis set有100個(M)我的N最少要幾個
 
+$\tiny{out}$
 
+$\frac{1}{2 \epsilon^2}$
+
+$ N= \frac{1}{2 \epsilon^2}ln \frac{2M}{\delta} $
 答案為2
 
 ---

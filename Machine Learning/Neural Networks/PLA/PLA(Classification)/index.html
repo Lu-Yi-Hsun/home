@@ -1126,8 +1126,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>所以<span><span class="MathJax_Preview">W_{f}^{T}W_{t+1}&gt;W_{f}^{T}W_{t}</span><script type="math/tex">W_{f}^{T}W_{t+1}>W_{f}^{T}W_{t}</script></span>
-意思是當""向量長度一樣""的時候,兩個向量內積越來越大代表越接近,也就證明了<span><span class="MathJax_Preview">W_{t+1}</span><script type="math/tex">W_{t+1}</script></span>越靠近答案<span><span class="MathJax_Preview">W_{f}</span><script type="math/tex">W_{f}</script></span></p>
+<p>所以<span><span class="MathJax_Preview">{W_f}^{T}W_{t+1} &gt; {W_f}^{T}W_t</span><script type="math/tex">{W_f}^{T}W_{t+1} > {W_f}^{T}W_t</script></span>意思是當""向量長度一樣""的時候,兩個向量內積越來越大代表越接近,也就證明了<span><span class="MathJax_Preview">W_{t+1}</span><script type="math/tex">W_{t+1}</script></span>越靠近答案<span><span class="MathJax_Preview">W_f</span><script type="math/tex">W_f</script></span></p>
 </div>
 <hr />
 <h3 id="proof-2">Proof 2<a class="headerlink" href="#proof-2" title="Permanent link">&para;</a></h3>
@@ -1154,10 +1153,11 @@
 <h3 id="finally-proof">Finally Proof<a class="headerlink" href="#finally-proof" title="Permanent link">&para;</a></h3>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<div>
-<div class="MathJax_Preview">\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\geq ?</div>
-<script type="math/tex; mode=display">\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\geq ?</script>
+<p><span><span class="MathJax_Preview">\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\geq ?</span><script type="math/tex">\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\geq ?</script></span></p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p><span><span class="MathJax_Preview">1\frac{1}{2}</span><script type="math/tex">1\frac{1}{2}</script></span> <span><span class="MathJax_Preview">\frac{1}{a^{5} + 1}</span><script type="math/tex">\frac{1}{a^{5} + 1}</script></span></p>
 </div>
 <p>By Proof  1:</p>
 <div>
@@ -1194,14 +1194,28 @@ W_{f}^{T}W_{X}&\geq W_{f}^{T}W_{X-1}+\underset{n}{min}~y_{n}W_{f}^{T}x_{n}\\
 </script>
 </div>
 <p>We have</p>
+<div>
+<div class="MathJax_Preview">
+\begin{cases}
+ W_{f}^{T}W_{X}\geq X*\underset{n}{min}~y_{n}W_{f}^{T}x_{n}\\ 
+ \|W_{X}\|^2\leq X*\underset{n}{max}\|x_{n}\|^2
+\end{cases}
+</div>
+<script type="math/tex; mode=display">
+\begin{cases}
+ W_{f}^{T}W_{X}\geq X*\underset{n}{min}~y_{n}W_{f}^{T}x_{n}\\ 
+ \|W_{X}\|^2\leq X*\underset{n}{max}\|x_{n}\|^2
+\end{cases}
+</script>
+</div>
 <div class="admonition info">
 <p class="admonition-title">When these two vector's angle is close to 0</p>
 <div>
 <div class="MathJax_Preview">
-\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\approx 1
+\frac{ {W_{f}}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\approx 1
 </div>
 <script type="math/tex; mode=display">
-\frac{W_{f}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\approx 1
+\frac{ {W_{f}}^{T}}{\|W_{f}\|}\frac{W_{X}}{\|W_{X}\|}\approx 1
 </script>
 </div>
 </div>
@@ -1321,6 +1335,8 @@ W_{f}^{T}W_{X}&\geq W_{f}^{T}W_{X-1}+\underset{n}{min}~y_{n}W_{f}^{T}x_{n}\\
       <script src="../../../../assets/javascripts/application.6cdc17f0.js"></script>
       
       <script>app.initialize({version:"0.17.2",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

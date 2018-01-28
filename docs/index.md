@@ -1,12 +1,13 @@
 # Home
-這裡是我的學習筆記
-內容：
+我的學習筆記內容來源取自：
 
 * 林軒田教授 線上課程
 
-* 莫凡python
+* 莫烦Python
 
 * 論文
+
+* [Mark Chang's Blog](https://ckmarkoh.github.io/)
 
 # Author's notes
 

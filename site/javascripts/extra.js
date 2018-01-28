@@ -1,4 +1,5 @@
 window.MathJax = {
+  jax: ["input/TeX","output/SVG"],
   tex2jax: {
     inlineMath: [ ["\\(","\\)"] ],
     displayMath: [ ["\\[","\\]"] ]
@@ -18,3 +19,5 @@ window.MathJax = {
   showProcessingMessages: false,
   messageStyle: "none"
 };
+
+

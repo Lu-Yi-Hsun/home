@@ -261,7 +261,8 @@ Perceptron Learning Algorithm
     * 還沒跑夠
     * 非線性可分
 
-![](/assets/擷取選取區域_049.png)
+![](/images/擷取選取區域_049.png)
+
 ###符號解釋
 * $W_{f}^{T}=$真實想求的函數(通常未知)
 * $W_{X}=$非常"接近答案"的函數

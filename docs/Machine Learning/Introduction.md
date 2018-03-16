@@ -78,7 +78,7 @@
 ---
 
 ### Protocol 
-輸入資料的方法$f \implies (x_{n},y_{n})$
+輸入資料的方法$f \Longrightarrow (x_{n},y_{n})$
 
 
 
@@ -173,9 +173,13 @@ $\nu$$和$$\mu$大概差不多是對的,在$\epsilon$容忍誤差內
 ---
 
 ### Hoeffding's inequality應用在機器學習  
-$\nu \implies E_{in}(h)$
+
+
+
+$\nu \Longrightarrow E_{in}(h)$
  
-$\mu\implies E_{out}(h)$
+$\mu \Longrightarrow E_{out}(h)$
+
 ####符號解釋
 
 * $E_{in}(h)$:在已知的資料內,該演算法目前犯錯的機率(越小準確率越高)
@@ -427,9 +431,9 @@ break point 計算方法
 * 這個形狀下發生無法用線分開,其他形狀也發生無法全部分開所以breakpoint為4  
   ![](/images/bb2.JPG)
 
-| m$$\tiny{H}(N)$$=O\($$N^{breakpoint-1}$$\) | positive rays | positive intervals | convex | 2D perceptrons |
+| m$\tiny{H}(N)$=O($N^{breakpoint-1}$) | positive rays | positive intervals | convex | 2D perceptrons |
 | :--- | :--- | :--- | :--- | :--- |
-| m$$\tiny{H}(N)$$ | N+1 =O\(N\) | $$\frac{1}{2}N^2+\frac{1}{2}N+1$$=O\($$N^2$$\) | $$2^N$$ | $$O(N^3$$\) |
+| m$\tiny{H}(N)$ | N+1 =O(N) | $\frac{1}{2}N^2+\frac{1}{2}N+1$=O($N^2$) | $2^N$ | $O(N^3$\) |
 | break point | 2 | 3 | None | 4 |
 
 最後如果要用dichotomy取代hypothesis set

@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-01-28</lastmod>
+     <lastmod>2018-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>/Crypto currency/investment/</loc>
-     <lastmod>2018-01-28</lastmod>
+     <lastmod>2018-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -28,8 +28,24 @@
     
         
     <url>
+     <loc>/C語言/指標/</loc>
+     <lastmod>2018-03-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/Machine Learning/Introduction/</loc>
-     <lastmod>2018-01-28</lastmod>
+     <lastmod>2018-03-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         

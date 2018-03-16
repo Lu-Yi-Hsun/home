@@ -73,13 +73,14 @@ b_conv1 = bias_variable([32])
 h_conv1 = Swish(conv2d(x_image, W_conv1) + b_conv1) ##swish
 
 h_pool1 = max_pool_2x2(h_conv1)                                         # output size 14x14x32
-
+norm1 = tf.nn.lrn(h_pool1, 3, bias=1.0, alpha=0.001 / 9.0, beta=0.75,
+                    name='norm1')
 ## conv2 layer ##
 W_conv2 = weight_variable([5,5, 32, 64]) # patch 5x5, in size 32, out size 64
 b_conv2 = bias_variable([64])
 
 #h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2) # output size 14x14x64
-h_conv2 = Swish(conv2d(h_pool1, W_conv2) + b_conv2) ##swish
+h_conv2 = Swish(conv2d(norm1, W_conv2) + b_conv2) ##swish
 
 
 h_pool2 = max_pool_2x2(h_conv2)                                         # output size 7x7x64
@@ -92,7 +93,6 @@ h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*64])
 
 #h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)#normal
 h_fc1 = Swish(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)##swish
-
 h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
 
 ## fc2 layer ##
@@ -153,7 +153,7 @@ def fu(x):
   return math.exp(-24+13*x)
 
 print("開始做深度學習")
-batch_size=1000#硬體夠好才能調高
+batch_size=100#硬體夠好才能調高
 lr=1e-4
 head=0
 end=batch_size

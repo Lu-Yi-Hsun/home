@@ -7,6 +7,8 @@
 
 * 論文
 
+* c語言- jserv (黃敬群)老師的線上資源
+
 * [Mark Chang's Blog](https://ckmarkoh.github.io/)
 
 # Author's notes

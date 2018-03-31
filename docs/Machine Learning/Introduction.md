@@ -68,7 +68,7 @@
 
 |Supervised|Semi-supervised|
 |:---:|:---:|
-|Sample:Classification ![](/images/classification_mu.PNG)  </br> 已經標記好資料 |![](/images/擷取選取區域_056.png)|
+|Sample:Classification ![](/images/classification_mu.PNG)  </br> 已經標記好資料 </br>又可分成</br>生成模型(Generative Model) </br>判别模型(Discriminative Model) |![](/images/擷取選取區域_056.png)|
 
 
 |Unsupervised|Reinforcement Learning (增強式學習)|

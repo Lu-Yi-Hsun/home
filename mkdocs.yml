@@ -4,7 +4,7 @@ repo_url: 'https://github.com/Lu-Yi-Hsun/home'
 edit_uri: "" # this code say do not view edit on page
 extra:
   search:
-    -language: 'en'
+    -language: 'en, jp'
     #-tokenizer: '[\a\-\.]+'
   social:
     - type: 'github'

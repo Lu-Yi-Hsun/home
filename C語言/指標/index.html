@@ -351,18 +351,19 @@
     function pointer
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" title="例題一" class="md-nav__link">
-    例題一
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lvalue" title="lvalue" class="md-nav__link">
+    lvalue
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#pointer-to-pointer" title="pointer to pointer **" class="md-nav__link">
+    pointer to pointer **
+  </a>
   
 </li>
       
@@ -705,18 +706,19 @@
     function pointer
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" title="例題一" class="md-nav__link">
-    例題一
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lvalue" title="lvalue" class="md-nav__link">
+    lvalue
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#pointer-to-pointer" title="pointer to pointer **" class="md-nav__link">
+    pointer to pointer **
+  </a>
   
 </li>
       
@@ -737,13 +739,13 @@
                 
                 <h1 id="_1">指標<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p><a href="http://hackfoldr.org/dykc/https%253A%252F%252Fhackmd.io%252Fs%252FHyBPr9WGl">你所不知道的C語言-學習筆記</a></p>
+<hr />
 <h2 id="function-pointer">function pointer<a class="headerlink" href="#function-pointer" title="Permanent link">&para;</a></h2>
-<h3 id="_2">例題一<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>(*(void(*)())0)()</p>
 <p><img alt="" src="../../images/pointer.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">用途</p>
-<p>指向其他的函數 其他寫法會比較漂亮</p>
+<p>指向其他的函數 這樣寫只需要一行,缺點一般人看不懂</p>
 </div>
 <details class="note"><summary>(<em>(void(</em>)())dd_prt)()把function pointer 指向其他的函數</summary><div class="codehilite"><pre><span></span>    <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
     <span class="kt">void</span> <span class="nf">dd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span>
@@ -752,13 +754,61 @@
     <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
     <span class="p">{</span>
     <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
-    <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">dd_prt</span><span class="p">)(</span><span class="kt">int</span><span class="p">)</span><span class="o">=&amp;</span><span class="n">dd</span><span class="p">;</span><span class="c1">//宣告function pointer </span>
+    <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">dd_prt</span><span class="p">)(</span><span class="kt">int</span><span class="p">)</span><span class="o">=&amp;</span><span class="n">dd</span><span class="p">;</span><span class="c1">//宣告function pointer</span>
     <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)())</span><span class="n">dd_prt</span><span class="p">)(</span><span class="mi">5566</span><span class="p">);</span>
-                 <span class="c1">//^^^^這裡可以寫記憶體位置(所以該位置指向dd function所以我們能操作dd)      </span>
+                 <span class="c1">//^^^^這裡可以寫記憶體位置(所以該位置指向dd function所以我們能操作dd)</span>
         <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
 </pre></div>
-</details>
+</details><hr />
+<h2 id="lvalue">lvalue<a class="headerlink" href="#lvalue" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">用途</p>
+<p>直接改動某個位置的記憶體,變數的數值</p>
+</div>
+<div class="codehilite"><pre><span></span><span class="o">*</span><span class="p">(</span><span class="kt">int32_t</span> <span class="o">*</span> <span class="k">const</span><span class="p">)</span> <span class="p">(</span><span class="mh">0x67a9</span><span class="p">)</span> <span class="o">=</span> <span class="mh">0xaa6</span><span class="p">;</span>
+</pre></div>
+
+<hr />
+<h2 id="pointer-to-pointer">pointer to pointer **<a class="headerlink" href="#pointer-to-pointer" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">用途</p>
+<p>可以讓名稱一樣但指向不同位置</p>
+</div>
+<details class="note"><summary>program1</summary><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="n">b</span><span class="o">=</span><span class="mi">5278</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="o">**</span><span class="n">p</span><span class="p">){</span>
+    <span class="o">*</span><span class="n">p</span><span class="o">=&amp;</span><span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">7788</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">name</span><span class="o">=&amp;</span><span class="n">a</span><span class="p">;</span>
+       <span class="c1">//^^^名稱都一樣但是可以用func這個函數指向其他變數</span>
+    <span class="n">func</span><span class="p">(</span><span class="o">&amp;</span><span class="n">name</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="o">*</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</details><details class="note"><summary>program2</summary><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="n">b</span><span class="o">=</span><span class="mi">5278</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">name</span><span class="p">){</span>
+    <span class="o">*</span><span class="n">name</span><span class="o">=</span><span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">int</span> <span class="n">name</span><span class="o">=</span><span class="mi">7788</span><span class="p">;</span>
+<span class="n">func</span><span class="p">(</span><span class="o">&amp;</span><span class="n">name</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</details><div class="admonition question">
+<p class="admonition-title">到底program1和program2有什麼差別?</p>
+<p>program1 </br>
+<img alt="" src="../../images/pointer2.png" /></br>
+program2 </br></p>
+</div>
+<hr />
                 
                   
                 

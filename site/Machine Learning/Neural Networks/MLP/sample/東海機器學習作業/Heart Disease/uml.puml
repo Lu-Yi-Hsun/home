@@ -1,0 +1,32 @@
+@startuml
+
+partition Pre-processing {
+  (*) --> "Missing data:\n dele data ..Multiple Imputation"
+  --> "Data normalization:\n Softmax"
+  ----> "Training-and-Testing-Set-Separation"
+  
+}
+partition Training-and-Testing-Set-Separation  {
+-->"Randomly split dataset"
+note left
+Randomly split dataset to 
+training (85%) and testing(15%) set
+end note
+}
+"Randomly split dataset"-->"Training set"
+"Training set"---->"Training-algorithm"
+
+"Randomly split dataset"-->"Testing set"
+"Testing set"--------->"Testing"
+partition Training-algorithm {
+ "MLP algorithm "-->Testing
+}
+partition Testing {
+-->"Run Test on Testing Set"
+
+}
+
+"Run Test on Testing Set"-->"Accuracy Testing"
+"Accuracy Testing"--> (*)
+
+@enduml

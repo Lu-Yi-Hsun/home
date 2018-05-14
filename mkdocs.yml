@@ -4,7 +4,7 @@ repo_url: 'https://github.com/Lu-Yi-Hsun/home'
 edit_uri: "" # this code say do not view edit on page
 extra:
   search:
-    -language: 'en, jp'
+    -language: 'zh-Hant'
     #-tokenizer: '[\a\-\.]+'
   social:
     - type: 'github'
@@ -17,6 +17,7 @@ extra:
      # link: 'https://linkedin.com/in/squidfunk'
 
 theme:
+  language: "zh-Hant"
   name: 'material'
   feature:
     tabs: false

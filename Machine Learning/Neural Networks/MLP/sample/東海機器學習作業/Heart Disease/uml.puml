@@ -1,8 +1,8 @@
 @startuml
 
 partition Pre-processing {
-  (*) --> "Missing data:\n dele data ..Multiple Imputation"
-  --> "Data normalization:\n Softmax"
+  (*) --> "Missing data:\n Delete data"
+  --> "Data normalization"
   ----> "Training-and-Testing-Set-Separation"
   
 }
@@ -22,11 +22,11 @@ partition Training-algorithm {
  "MLP algorithm "-->Testing
 }
 partition Testing {
--->"Run Test on Testing Set"
+-->"Run Model on Testing Set"
 
 }
 
-"Run Test on Testing Set"-->"Accuracy Testing"
-"Accuracy Testing"--> (*)
+"Run Model on Testing Set"-->"Accuracy"
+"Accuracy"--> (*)
 
 @enduml

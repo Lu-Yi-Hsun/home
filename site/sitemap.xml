@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-03-31</lastmod>
+     <lastmod>2018-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,8 +12,28 @@
     
         
     <url>
+     <loc>/5G Network/Note/</loc>
+     <lastmod>2018-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/CUDA/sample/</loc>
+     <lastmod>2018-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/Crypto currency/investment/</loc>
-     <lastmod>2018-03-31</lastmod>
+     <lastmod>2018-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -29,7 +49,7 @@
         
     <url>
      <loc>/C語言/指標/</loc>
-     <lastmod>2018-03-31</lastmod>
+     <lastmod>2018-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -39,7 +59,7 @@
         
     <url>
      <loc>/Machine Learning/Introduction/</loc>
-     <lastmod>2018-03-31</lastmod>
+     <lastmod>2018-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

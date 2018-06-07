@@ -107,7 +107,7 @@ cross_entropy = tf.reduce_mean(-tf.reduce_sum(ys * tf.log(prediction),
                                               reduction_indices=[1]))       # loss
 train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 config = tf.ConfigProto(
-    device_count={'GPU': 0}
+    device_count={'GPU': 1}
 )
 sess = tf.Session(config=config)
 

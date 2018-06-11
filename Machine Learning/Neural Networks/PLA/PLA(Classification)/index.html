@@ -1112,7 +1112,98 @@
 <p>可以容錯是pla變形演算法叫pocket</p>
 <h2 id="implement-pla-classification">Implement PLA (Classification)<a class="headerlink" href="#implement-pla-classification" title="Permanent link">&para;</a></h2>
 <h3 id="sample-version">sample version<a class="headerlink" href="#sample-version" title="Permanent link">&para;</a></h3>
-<details class="note"><summary>Code</summary><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<details class="note"><summary>Code</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 <span class="c1">#網路上找的dataset 可以線性分割</span>
@@ -1205,9 +1296,135 @@
 <span class="n">w</span> <span class="o">=</span> <span class="n">pla</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 <span class="n">print_image</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 </details><h3 id="optimizer-version">Optimizer Version<a class="headerlink" href="#optimizer-version" title="Permanent link">&para;</a></h3>
 <p>耗時&#8531;</p>
-<details class="note"><summary>Code</summary><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<details class="note"><summary>Code</summary><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="c1">#網路上找的dataset 可以線性分割</span>
@@ -1334,6 +1551,7 @@
 <span class="n">w</span> <span class="o">=</span> <span class="n">pla</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 <span class="n">print_image</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 </details><hr />
 <h2 id="pla">證明線性可分時PLA演算法會停<a class="headerlink" href="#pla" title="Permanent link">&para;</a></h2>
 <p><a href="https://rhadow.github.io/2016/02/24/ml-lecture-2/">參考網路教學</a></p>

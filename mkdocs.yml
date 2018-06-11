@@ -1,8 +1,10 @@
 site_name: Lu Yi Hsun
 repo_name: 'Lu-Yi-Hsun/home'
 repo_url: 'https://github.com/Lu-Yi-Hsun/home'
+site_url: 'https://lu-yi-hsun.github.io/home/'
 edit_uri: "" # this code say do not view edit on page
 extra:
+  disqus: 'lu-yi-hsun'
   search:
     language: 'jp'
     #-tokenizer: '[\a\-\.]+'
@@ -15,6 +17,7 @@ extra:
       #link: 'https://twitter.com/squidfunk'
    # - type: 'linkedin'
      # link: 'https://linkedin.com/in/squidfunk'
+    
 
 theme:
   language: "zh-Hant"
@@ -25,7 +28,7 @@ theme:
     text: 'Roboto'
     code: 'Roboto Mono'
   favicon: images/icon/rocket.png
-
+  
 
 # Extensions
 markdown_extensions:

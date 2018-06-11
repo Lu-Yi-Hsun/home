@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-06-07</lastmod>
+     <lastmod>2018-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>/5G Network/Note/</loc>
-     <lastmod>2018-06-07</lastmod>
+     <lastmod>2018-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -22,14 +22,20 @@
     
         
     <url>
+     <loc>/C/Mix c & ASM/</loc>
+     <lastmod>2018-06-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/C/指標/</loc>
-     <lastmod>2018-06-07</lastmod>
+     <lastmod>2018-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/C/高效能c/</loc>
-     <lastmod>2018-06-07</lastmod>
+     <lastmod>2018-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -39,7 +45,7 @@
         
     <url>
      <loc>/CUDA/sample/</loc>
-     <lastmod>2018-06-07</lastmod>
+     <lastmod>2018-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -49,7 +55,7 @@
         
     <url>
      <loc>/Crypto currency/investment/</loc>
-     <lastmod>2018-06-07</lastmod>
+     <lastmod>2018-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -65,7 +71,7 @@
         
     <url>
      <loc>/Machine Learning/Introduction/</loc>
-     <lastmod>2018-06-07</lastmod>
+     <lastmod>2018-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -87,7 +93,7 @@
         
     <url>
      <loc>/金融/交易聖經/</loc>
-     <lastmod>2018-06-07</lastmod>
+     <lastmod>2018-06-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

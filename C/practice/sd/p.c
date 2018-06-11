@@ -18,9 +18,9 @@ long diff_in_nsec(struct timespec start, struct timespec end)
 
 struct foo {
   int x;
- //char xx[60];
+ char xx[60];
   int y;  
-};//__attribute__((align(64)));__attribute__((packed));
+}__attribute__((packed));
 static struct foo f;
 int ii=10000000;
 int sum_a(void)

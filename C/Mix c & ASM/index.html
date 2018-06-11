@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://lu-yi-hsun.github.io/home/C/Mix c & ASM/">
+      
       
       
         <meta name="lang:clipboard.copy" content="拷貝">
@@ -28,7 +30,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../../images/icon/rocket.png">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.2.1">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.2.1">
     
     
       
@@ -71,7 +73,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Lu Yi Hsun" class="md-header-nav__button md-logo">
+        <a href="https://lu-yi-hsun.github.io/home/" title="Lu Yi Hsun" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -314,8 +316,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" title="第一手資料尋找方式" class="md-nav__link">
-    第一手資料尋找方式
+  <a href="#system-call-implement-location" title="System call implement location" class="md-nav__link">
+    System call implement location
   </a>
   
 </li>
@@ -326,7 +328,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="輸出範例" class="md-nav__link">
+  <a href="#_2" title="輸出範例" class="md-nav__link">
     輸出範例
   </a>
   
@@ -353,6 +355,12 @@
 </li>
       
       
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="評論" class="md-nav__link md-nav__link--active">
+            評論
+          </a>
+        </li>
       
     </ul>
   
@@ -918,8 +926,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" title="第一手資料尋找方式" class="md-nav__link">
-    第一手資料尋找方式
+  <a href="#system-call-implement-location" title="System call implement location" class="md-nav__link">
+    System call implement location
   </a>
   
 </li>
@@ -930,7 +938,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="輸出範例" class="md-nav__link">
+  <a href="#_2" title="輸出範例" class="md-nav__link">
     輸出範例
   </a>
   
@@ -958,6 +966,12 @@
       
       
       
+        <li class="md-nav__item">
+          <a href="#__comments" title="評論" class="md-nav__link md-nav__link--active">
+            評論
+          </a>
+        </li>
+      
     </ul>
   
 </nav>
@@ -973,45 +987,38 @@
                 
                 <h1 id="mix-c-asm">Mix c &amp; ASM<a class="headerlink" href="#mix-c-asm" title="Permanent link">&para;</a></h1>
 <h2 id="_1">簡介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>為了加快效能與特殊需求可以使用</p>
-<p>組合語言與c語言混和撰寫方式</p>
-<p>os:linux(x64)</p>
+<p>為了加快效能與特殊需求可以使用,組合語言與c語言混和撰寫方式</p>
+<p>os:linux(x64)(#e)</p>
 <p>編譯器:gcc</p>
 <p>接下來皆以64位元linux示範</p>
 <p>與32位元會有所不一樣</p>
 <h2 id="linux-system-call">Linux system call<a class="headerlink" href="#linux-system-call" title="Permanent link">&para;</a></h2>
 <p><a href="http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/">第二手資源</a></p>
-<h3 id="_2">第一手資料尋找方式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="system-call-implement-location">System call implement location<a class="headerlink" href="#system-call-implement-location" title="Permanent link">&para;</a></h3>
 <p><a href="https://github.com/torvalds/linux">linux原始碼</a></p>
-<p>以下舉例：sys_write</p>
+<p>以下舉例：__x64_sys_write</p>
 <ul>
 <li>
-<p>從<a href="https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_64.tbl#L12">syscall_64.tbl</a>尋找sys_write</p>
-<p>根據該檔案知道sys_write system call編號1 所以暫存器%rax 填入1</p>
+<p>從<a href="https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_64.tbl#L12">syscall_64.tbl</a>尋找__x64_sys_write</p>
+<p>根據該檔案知道 __x64_sys_write 編號1 所以暫存器%rax 填入1</p>
 </li>
 <li>
-<p>尋找實做該system call的檔案
-    sys_write實做檔案</p>
-<p><a href="http://www.jollen.org/blog/2006/10/linux_26_system_call12.html#c2">linux system call 實做位置</a></p>
-<p>linux/fs/read_write.c</p>
-</li>
-<li>
-<p>根據該檔案搜尋實做的函數 </p>
-<p><a href="https://github.com/torvalds/linux/blob/master/fs/read_write.c#L607">實做函數位置</a></p>
-<p><div class="codehilite"><pre><span></span>linux/fs/read_write.c 
-</pre></div>
-x:編號不一定</p>
-<p>要搜尋有write的SYSCALL_DEFINEx</p>
-<div class="codehilite"><pre><span></span>SYSCALL_DEFINEx(write,....){...}
+<p>搜尋實做的函數 </p>
+<div class="codehilite"><pre><span></span><span class="n">SYSCALL_DEFINEx</span><span class="p">(</span><span class="n">function_name</span><span class="p">,....){...}</span>
 </pre></div>
 
+<p>function_name:write</p>
+<p>x:這個編號不一定</p>
 </li>
 </ul>
 <div class="admonition __x64_sys_write">
 <p class="admonition-title">__x64_sys_write</p>
-<p><a href="https://github.com/torvalds/linux/blob/master/fs/read_write.c#L607">source</a></br>
+<p><a href="https://github.com/torvalds/linux/blob/master/fs/read_write.c#L607">__x64_sys_write實做位置</a> </br>
 我們看到ksys_write(fd, buf, count)有三個變數</br>
-根據ABI規則依序填入暫存器fd=%rdi,buf=%rsi,count=%rdx
+根據ABI規則依序填入暫存器</br>
+fd %rdi</br>
+buf %rsi</br>
+count %rdx</br>
 <div class="codehilite"><pre><span></span><span class="n">SYSCALL_DEFINE3</span><span class="p">(</span><span class="n">write</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span><span class="p">,</span> <span class="n">fd</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="n">__user</span> <span class="o">*</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span><span class="kt">size_t</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="n">ksys_write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
@@ -1046,24 +1053,16 @@ x:編號不一定</p>
 </tr>
 </tbody>
 </table>
-<p>關於此段指令為什麼填入1的理由</p>
-<p><a href="https://stackoverflow.com/questions/5256599/what-are-file-descriptors-explained-in-simple-terms/5257718#5257718">"mov $1, %%rdi\n"</a></p>
-<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">print_asm</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">arg1</span><span class="p">,</span><span class="kt">long</span> <span class="kt">int</span> <span class="n">size</span><span class="p">){</span> 
-    <span class="n">__asm__</span> <span class="p">(</span>
-        <span class="s">&quot;mov $1, %%rax</span><span class="se">\n</span><span class="s">&quot;</span><span class="c1">//system call 編碼</span>
-        <span class="s">&quot;mov $1, %%rdi</span><span class="se">\n</span><span class="s">&quot;</span><span class="c1">//fd 設定1 代表把字串輸入/dev/stdout 這裡就是螢幕輸出地方</span>
-        <span class="s">&quot;mov %0,%%rsi</span><span class="se">\n</span><span class="s">&quot;</span><span class="c1">//輸入字串記憶體位置</span>
-        <span class="s">&quot;mov %1, %%rdx</span><span class="se">\n</span><span class="s">&quot;</span> <span class="c1">//這裡輸入字串長度 ,可以跟記憶體位置搭配來輸出到螢幕</span>
-        <span class="s">&quot;syscall&quot;</span><span class="c1">//x64 要用此呼叫systemcall 不能在使用int $0x80</span>
-        <span class="o">:</span>
-        <span class="o">:</span><span class="s">&quot;m&quot;</span> <span class="p">(</span><span class="n">arg1</span><span class="p">),</span><span class="s">&quot;m&quot;</span> <span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="c1">//詳細請參考gcc inline asm</span>
-    <span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-
-<h2 id="_3">輸出範例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>參考資源：</p>
+<p><a href="https://stackoverflow.com/questions/2442966/c-c-function-definitions-without-assembly/2444508#2444508">C/C++ function definitions without assembly</a></p>
+<p><a href="https://unix.stackexchange.com/questions/797/how-can-i-find-the-implementations-of-linux-kernel-system-calls">How can I find the implementations of Linux kernel system calls?</a></p>
+<p><a href="http://www.jollen.org/blog/2006/10/linux_26_system_call12.html#c2">linux system call</a></p>
+<h2 id="_2">輸出範例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="casm">C內嵌ASM<a class="headerlink" href="#casm" title="Permanent link">&para;</a></h3>
 <p>實做直接呼叫linux system code</p>
+<p>根據1-1表格找到的資訊</p>
+<p>關於此段指令為什麼填入1的理由</p>
+<p><a href="https://stackoverflow.com/questions/5256599/what-are-file-descriptors-explained-in-simple-terms/5257718#5257718">"mov $1, %%rdi\n"</a></p>
 <div class="admonition print">
 <p class="admonition-title">Print</p>
 <div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">print_asm</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">arg1</span><span class="p">,</span><span class="kt">long</span> <span class="kt">int</span> <span class="n">size</span><span class="p">){</span> 
@@ -1086,11 +1085,28 @@ x:編號不一定</p>
 
 </div>
 <h3 id="c-asm">C &amp; ASM混和編譯<a class="headerlink" href="#c-asm" title="Permanent link">&para;</a></h3>
+<p><a href="#e">ss</a></p>
                 
                   
                 
               
               
+                
+                  <h2 id="__comments">評論</h2>
+                  <div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = "https://lu-yi-hsun.github.io/home/C/Mix c & ASM/";
+    this.page.identifier =
+      "C/Mix c & ASM/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "//lu-yi-hsun.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
                 
               
             </article>
@@ -1182,7 +1198,7 @@ x:編號不一定</p>
           
         
       
-      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.4",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/extra.js"></script>
       

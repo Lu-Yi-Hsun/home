@@ -1,0 +1,462 @@
+cscope 15 $HOME/WorkSpace/GitHub/home/docs/Cèªžè¨€/ç·´ç¿’ -q 0000000042 0000002266
+	@p.c
+
+1 
+	~<time.h
+>
+
+2 
+	~<¡dio.h
+>
+
+3 
+	~<±h»ad.h
+>
+
+5 
+diff_š_£c
+(
+time¥ec
+,timespec);
+
+6 
+diff_š_n£c
+(
+time¥ec
+,timespec);
+
+8 
+	$diff_š_£c
+(
+time¥ec
+ 
+t1
+, time¥eø
+t2
+)
+
+10 
+diff
+=
+	`diff_š_n£c
+(
+t1
+,
+t2
+);
+
+11  (
+diff
+/10e9);
+
+12 
+	}
+}
+
+14 
+	$diff_š_n£c
+(
+time¥ec
+ 
+¡¬t
+, time¥eø
+’d
+)
+
+16  (
+’d
+.
+tv_£c
+*10e9+’d.
+tv_n£c
+)-(
+¡¬t
+.tv_sec*10e9+start.tv_nsec);
+
+17 
+	}
+}
+
+19 
+	sfoo
+ {
+
+20 
+	mx
+;
+
+22 
+	my
+;
+
+23 };
+__©Œibu‹__
+((
+®ign
+(64)));__©Œibu‹__((
+·cked
+));
+
+24 
+foo
+ 
+	gf
+;
+
+25 
+	$sum_a
+()
+
+27 
+s
+ = 0;
+
+28 
+i
+;
+
+29 
+i
+ = 0; i < 1000000000; ++i)
+
+30 
+s
+ +ð
+f
+.
+x
+;
+
+31  
+s
+;
+
+32 
+	}
+}
+
+33 
+	$šc_b
+()
+
+35 
+i
+;
+
+36 
+i
+ = 0; i < 1000000000; ++i)
+
+37 ++
+f
+.
+y
+;
+
+38 
+	}
+}
+
+41 
+	$t
+(){
+
+42 
+±h»ad_t
+ 
+id
+;
+
+43 
+	`±h»ad_ü—‹
+(&
+id
+,
+NULL
+,(*è
+sum_a
+,NULL);
+
+44 
+±h»ad_t
+ 
+id2
+;
+
+45 
+	`±h»ad_ü—‹
+(&
+id2
+,
+NULL
+,(*è
+šc_b
+,NULL);
+
+46 
+	`±h»ad_još
+(
+id
+,
+NULL
+);
+
+47 
+	`±h»ad_još
+(
+id2
+,
+NULL
+);
+
+48 
+	}
+}
+
+50 
+	$o
+(){
+
+51 
+	`sum_a
+();
+
+52 
+	`šc_b
+();
+
+53 
+	}
+}
+
+54 
+	$maš
+(){
+
+55 
+	`´štf
+("%d\n",(
+f
+));
+
+56 
+time¥ec
+ 
+¡¬t_time
+,
+’d_time
+;
+
+57 
+	`þock_g‘time
+(
+CLOCK_REALTIME
+, &
+¡¬t_time
+);
+
+58 
+	`t
+();
+
+59 
+	`þock_g‘time
+(
+CLOCK_REALTIME
+, &
+’d_time
+);
+
+60 
+	`´štf
+("%.10lfs\t%ldns",
+	`diff_š_£c
+(
+¡¬t_time
+,
+’d_time
+),
+	`diff_š_n£c
+(start_time,end_time));
+
+63 
+	}
+}
+
+	@slee.c
+
+1 
+	~<¡dio.h
+>
+
+3 
+	~<uni¡d.h
+>
+
+5 
+	$maš
+(){
+
+6 
+i
+=0;i<10;i++){
+
+7 
+	`¦“p
+(1);
+
+8 
+	`´štf
+("dewdew%d\r",
+i
+);
+
+9 
+	`fæush
+(
+¡dout
+);
+
+11 
+	}
+}
+
+	@time.c
+
+1 
+	~<time.h
+>
+
+2 
+	~<¡dio.h
+>
+
+4 
+diff_š_£c
+(
+time¥ec
+,timespec);
+
+5 
+diff_š_n£c
+(
+time¥ec
+,timespec);
+
+7 
+	$diff_š_£c
+(
+time¥ec
+ 
+t1
+, time¥eø
+t2
+)
+
+9 
+diff
+=
+	`diff_š_n£c
+(
+t1
+,
+t2
+);
+
+10  (
+diff
+/10e9);
+
+11 
+	}
+}
+
+13 
+	$diff_š_n£c
+(
+time¥ec
+ 
+¡¬t
+, time¥eø
+’d
+)
+
+15  (
+’d
+.
+tv_£c
+*10e9+’d.
+tv_n£c
+)-(
+¡¬t
+.tv_sec*10e9+start.tv_nsec);
+
+16 
+	}
+}
+
+18 
+	$maš
+()
+
+20 
+time¥ec
+ 
+¡¬t_time
+,
+’d_time
+;
+
+22 
+	`þock_g‘time
+(
+CLOCK_REALTIME
+, &
+¡¬t_time
+);
+
+23 
+i
+=0;i<100000000;i++){
+
+26 
+	`þock_g‘time
+(
+CLOCK_REALTIME
+, &
+’d_time
+);
+
+28 
+	`´štf
+("»sÞutiÚ: %.10lfs\n",
+	`diff_š_£c
+(
+¡¬t_time
+,
+’d_time
+));
+
+29 
+	`´štf
+("»sÞutiÚ: %ldns",
+	`diff_š_n£c
+(
+¡¬t_time
+,
+’d_time
+));
+
+32 
+	}
+}
+
+	@
+1
+.
+0
+3
+18
+p.c
+slee.c
+time.c

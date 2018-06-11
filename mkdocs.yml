@@ -24,6 +24,7 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+  favicon: images/icon/rocket.png
 
 
 # Extensions

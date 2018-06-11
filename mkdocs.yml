@@ -32,10 +32,11 @@ theme:
 
 # Extensions
 markdown_extensions:
+  - footnotes
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
       guess_lang: false
-      linenums: false
+      linenums: true
   - markdown.extensions.def_list
   - markdown.extensions.footnotes
   - markdown.extensions.meta

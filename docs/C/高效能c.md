@@ -1,5 +1,15 @@
 # 高效能c
- 
+## 簡介：
+
+為了追求病態效能潔癖
+需要先看過[Mix c & ASM](../C/Mix%20c%20&%20ASM/)
+
+[latency&CPI](https://stackoverflow.com/questions/40878534/latency-vs-throughput-in-intel-intrinsics)
+
+[Intel 指令集](https://software.intel.com/sites/landingpage/IntrinsicsGuide/)
+
+[高效能參考網站](http://agner.org/optimize/)
+
 ## 前製作業
 
 ### 測試平台規格 
@@ -84,33 +94,54 @@ struct timespec
     }
     ```
 ---
-## Memory
 
-### padding
+## Cpu
+## Cache 
 
-gcc will auto padding in 32bit
 
-padding for 64bit system
-```c
-struct foo {
-int x;
-char xx[1];
-int y;  
-}__attribute__((align(64)));
-```
 
-gcc without padding  
-```c
-struct foo {
-int x;
-char xx[1];
-int y;  
-}__attribute__((packed));
+### Cache info
+
+cache info[^1][^2][^3]
+
+linux kernel cache info [^4]
+
+```bash
+grep . /sys/devices/system/cpu/cpu0/cache/index*/*
+``` 
+```C
+/**
+ * struct cacheinfo - represent a cache leaf node
+ * @id: This cache's id. It is unique among caches with the same (type, level).
+ * @type: type of the cache - data, inst or unified
+ * @level: represents the hierarchy in the multi-level cache
+ * @coherency_line_size: size of each cache line usually representing
+ *	the minimum amount of data that gets transferred from memory
+ * @number_of_sets: total number of sets, a set is a collection of cache
+ *	lines sharing the same index
+ * @ways_of_associativity: number of ways in which a particular memory
+ *	block can be placed in the cache
+ * @physical_line_partition: number of physical cache lines sharing the
+ *	same cachetag
+ * @size: Total size of the cache
+ * @shared_cpu_map: logical cpumask representing all the cpus sharing
+ *	this cache node
+ * @attributes: bitfield representing various cache attributes
+ * @fw_token: Unique value used to determine if different cacheinfo
+ *	structures represent a single hardware cache instance.
+ * @disable_sysfs: indicates whether this node is visible to the user via
+ *	sysfs or not
+ * @priv: pointer to any private data structure specific to particular
+ *	cache design
+ *
+ * While @of_node, @disable_sysfs and @priv are used for internal book
+ * keeping, the remaining members form the core properties of the cache
+ */
 ```
 
 ---
 
-## Cache
+
 
 ### False Sharing
 
@@ -132,7 +163,7 @@ int y;
     ```
 
 ??? full_code
-    ```c
+    ```c hl_lines="19 20 21 22 23 24 25"  
     #include <time.h>
     #include <stdio.h>
     #include <pthread.h>
@@ -154,7 +185,7 @@ int y;
     struct foo {
     int x;
     //__________________
-    //char xx[60];
+    //char xx[60];  //comment out this line will be False sharing
     //__________________
     int y;  
     };//__attribute__((align(64)));__attribute__((packed));
@@ -199,3 +230,53 @@ int y;
     }
 
     ```
+compiler&run
+```bash
+gcc -o file file.c -pthread
+./file
+```
+
+|          | Sharing | False sharing |
+|----------|---------|---------------|
+| delay(s) | 2.947s  | 8.005s        |
+
+---
+## Memory
+
+### padding
+
+gcc will auto padding in 32bit
+
+padding for 64bit system
+```c
+struct foo {
+int x;
+char xx[1];
+int y;  
+}__attribute__((align(64)));
+```
+
+gcc without padding  
+```c
+struct foo {
+int x;
+char xx[1];
+int y;  
+}__attribute__((packed));
+```
+
+---
+
+
+
+## ISA Extensions(擴展指令集)
+
+[Intel ISA Extensions](https://software.intel.com/sites/landingpage/IntrinsicsGuide/)
+
+
+ 
+[^1]:https://stackoverflow.com/a/716229/9441803
+[^2]:https://lwn.net/Articles/254445/
+[^3]:https://www.findhao.net/easycoding/1694
+[^4]:https://github.com/torvalds/linux/blob/master/include/linux/cacheinfo.h#L20-L46
+ 

@@ -1,0 +1,9 @@
+@startuml
+"SDN Controller"->"MME Pool": (1) SDN Controller 啟動VM執行MME工作
+"SDN Controller"->"Distributed Topology Storage":(2) SDN Controller在DT Storage 中建立該MME之表格
+"SDN Controller"->"Mediator":(3) 告知 Mediator , 已建立表格,可開始更新資料 
+"MME Pool"->"Mediator":(4) MME 傳送認證UE的資料到Mediator Receiver
+"Mediator"->"Distributed Topology Storage":(5) Mediator Writer 將資料寫入 Distributed Topology Storage
+@enduml
+ 
+ 

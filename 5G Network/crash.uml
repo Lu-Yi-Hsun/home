@@ -1,0 +1,16 @@
+Mediator 故障流程圖
+
+@startuml
+start
+:check=0 >x ms;
+:send Heart beat to MME;t
+if (ACK Delay>1ms) then (yes)
+  :到DT Storage 中檢查該MME
+  服務之UE的Step欄位數值;
+else (no)
+  :process only;
+endif
+
+stop
+
+@enduml

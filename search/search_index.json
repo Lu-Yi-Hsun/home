@@ -71,6 +71,36 @@
             "title": "URLLC"
         },
         {
+            "location": "/5G Network/System Architecture for the 5G System/",
+            "text": "System Architecture for the 5G System\n\u00b6\n\n\nReference\n\u00b6\n\n\nSystem Architecture for the 5G System\n\n\n\u4e0b\u8f09\u898f\u683c\u66f8\n\n\n4.Architecture model and concepts\n\u00b6\n\n\n4.2Architecture reference model\n\u00b6\n\n\n4.2.3 Non-roaming reference architecture\n\u00b6\n\n\n1\n2\nBob -> Alice : hello\nAlice -> Bob : Go Away",
+            "title": "System Architecture for the 5G System"
+        },
+        {
+            "location": "/5G Network/System Architecture for the 5G System/#system-architecture-for-the-5g-system",
+            "text": "",
+            "title": "System Architecture for the 5G System"
+        },
+        {
+            "location": "/5G Network/System Architecture for the 5G System/#reference",
+            "text": "System Architecture for the 5G System  \u4e0b\u8f09\u898f\u683c\u66f8",
+            "title": "Reference"
+        },
+        {
+            "location": "/5G Network/System Architecture for the 5G System/#4architecture-model-and-concepts",
+            "text": "",
+            "title": "4.Architecture model and concepts"
+        },
+        {
+            "location": "/5G Network/System Architecture for the 5G System/#42architecture-reference-model",
+            "text": "",
+            "title": "4.2Architecture reference model"
+        },
+        {
+            "location": "/5G Network/System Architecture for the 5G System/#423-non-roaming-reference-architecture",
+            "text": "1\n2 Bob -> Alice : hello\nAlice -> Bob : Go Away",
+            "title": "4.2.3 Non-roaming reference architecture"
+        },
+        {
             "location": "/C/Mix c & ASM/",
             "text": "Mix c & ASM\n\u00b6\n\n\n\u7c21\u4ecb\n\u00b6\n\n\n\u70ba\u4e86\u52a0\u5feb\u6548\u80fd\u8207\u7279\u6b8a\u9700\u6c42\u53ef\u4ee5\u4f7f\u7528,\u7d44\u5408\u8a9e\u8a00\u8207c\u8a9e\u8a00\u6df7\u548c\u64b0\u5beb\u65b9\u5f0f\n\n\nos:linux(x64)(#e)\n\n\n\u7de8\u8b6f\u5668:gcc\n\n\n\u63a5\u4e0b\u4f86\u7686\u4ee564\u4f4d\u5143linux\u793a\u7bc4\n\n\n\u820732\u4f4d\u5143\u6703\u6709\u6240\u4e0d\u4e00\u6a23\n\n\nLinux system call\n\u00b6\n\n\n\u7b2c\u4e8c\u624b\u8cc7\u6e90\n\n\nSystem call implement location\n\u00b6\n\n\nlinux\u539f\u59cb\u78bc\n\n\n\u4ee5\u4e0b\u8209\u4f8b\uff1a__x64_sys_write\n\n\n\n\n\n\n\u5f9e\nsyscall_64.tbl\n\u5c0b\u627e__x64_sys_write\n\n\n\u6839\u64da\u8a72\u6a94\u6848\u77e5\u9053 __x64_sys_write \u7de8\u865f1 \u6240\u4ee5\u66ab\u5b58\u5668%rax \u586b\u51651\n\n\n\n\n\n\n\u641c\u5c0b\u5be6\u505a\u7684\u51fd\u6578 \n\n\n1\nSYSCALL_DEFINEx\n(\nfunction_name\n,....){...}\n\n\n\n\n\n\n\nfunction_name:write\n\n\nx:\u9019\u500b\u7de8\u865f\u4e0d\u4e00\u5b9a\n\n\n\n\n\n\n\n\n__x64_sys_write\n\n\n__x64_sys_write\u5be6\u505a\u4f4d\u7f6e\n \n\n\u6211\u5011\u770b\u5230ksys_write(fd, buf, count)\u6709\u4e09\u500b\u8b8a\u6578\n\n\u6839\u64daABI\u898f\u5247\u4f9d\u5e8f\u586b\u5165\u66ab\u5b58\u5668\n\nfd %rdi\n\nbuf %rsi\n\ncount %rdx\n\n\n1\n2\n3\n4\nSYSCALL_DEFINE3\n(\nwrite\n,\n \nunsigned\n \nint\n,\n \nfd\n,\n \nconst\n \nchar\n \n__user\n \n*\n,\n \nbuf\n,\nsize_t\n,\n \ncount\n)\n\n\n{\n\n    \nreturn\n \nksys_write\n(\nfd\n,\n \nbuf\n,\n \ncount\n);\n\n\n}\n\n\n\n\n\n\n\n\n\u6839\u64da\u4e0a\u9762\u7b54\u6848\u5efa\u7acb\u6b64\u8868\u683c\n\n\n\u8868\u683c1-1\n\n\n\n\n\n\n\n\n%rax\n\n\nSystem call\n\n\n%rdi\n\n\n%rsi\n\n\n%rdx\n\n\n%r10\n\n\n%r8\n\n\n%r9\n\n\n\n\n\n\n\n\n\n\n1\n\n\n__x64_sys_write\n\n\nfd\n\n\nbuf\n\n\ncount\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u53c3\u8003\u8cc7\u6e90\uff1a\n\n\nC/C++ function definitions without assembly\n\n\nHow can I find the implementations of Linux kernel system calls?\n\n\nlinux system call\n\n\n\u8f38\u51fa\u7bc4\u4f8b\n\u00b6\n\n\nC\u5167\u5d4cASM\n\u00b6\n\n\n\u5be6\u505a\u76f4\u63a5\u547c\u53eblinux system code\n\n\n\u6839\u64da1-1\u8868\u683c\u627e\u5230\u7684\u8cc7\u8a0a\n\n\n\u95dc\u65bc\u6b64\u6bb5\u6307\u4ee4\u70ba\u4ec0\u9ebc\u586b\u51651\u7684\u7406\u7531\n\n\n\"mov $1, %%rdi\\n\"\n\n\n\n\nPrint\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\nvoid\n \nprint_asm\n(\nchar\n \n*\narg1\n,\nlong\n \nint\n \nsize\n){\n \n    \n__asm__\n \n(\n\n        \n\"mov $1, %%rax\n\\n\n\"\n//system call \u7de8\u78bc\n\n        \n\"mov $1, %%rdi\n\\n\n\"\n//fd \u8a2d\u5b9a1 \u4ee3\u8868\u628a\u5b57\u4e32\u8f38\u5165/dev/stdout \u9019\u88e1\u5c31\u662f\u87a2\u5e55\u8f38\u51fa\u5730\u65b9\n\n        \n\"mov %0,%%rsi\n\\n\n\"\n//\u8f38\u5165\u5b57\u4e32\u8a18\u61b6\u9ad4\u4f4d\u7f6e\n\n        \n\"mov %1, %%rdx\n\\n\n\"\n \n//\u9019\u88e1\u8f38\u5165\u5b57\u4e32\u9577\u5ea6 ,\u53ef\u4ee5\u8ddf\u8a18\u61b6\u9ad4\u4f4d\u7f6e\u642d\u914d\u4f86\u8f38\u51fa\u5230\u87a2\u5e55\n\n        \n\"syscall\"\n//x64 \u8981\u7528\u6b64\u547c\u53ebsystemcall \u4e0d\u80fd\u5728\u4f7f\u7528int $0x80\n\n        \n:\n\n        \n:\n\"m\"\n \n(\narg1\n),\n\"m\"\n \n(\nsize\n)\n \n//\u8a73\u7d30\u8acb\u53c3\u8003gcc inline asm\n\n    \n);\n\n\n}\n\n\nint\n \nmain\n(\nvoid\n)\n \n{\n\n    \nchar\n \n*\nd\n=\n\"ss\n\\n\n\"\n;\n\n    \nprint_asm\n(\nd\n,\n3\n);\n\n\nreturn\n \n0\n;\n\n\n}\n\n\n\n\n\n\n\n\n\nC & ASM\u6df7\u548c\u7de8\u8b6f\n\u00b6\n\n\nss",
             "title": "Mix c & ASM"
@@ -214,6 +244,36 @@
             "location": "/CUDA/sample/#_1",
             "text": "https://devblogs.nvidia.com/even-easier-introduction-cuda/",
             "title": "\u8cc7\u6599\u4f86\u6e90"
+        },
+        {
+            "location": "/Computer Organization/The Hardware Software Interface/",
+            "text": "Computer Organization and Design: The Hardware/Software Interface\n\u00b6\n\n\nPreface\n\u00b6\n\n\nAbout This Book\n\u00b6\n\n\n\u5118\u7ba1\u7a0b\u5e8f\u54e1\u53ef\u4ee5\u5ffd\u7565\u9019\u4e9b\u5efa\u8b70\uff0c\u4e26\u4f9d\u9760\u8a08\u7b97\u6a5f\u67b6\u69cb\u5e2b\uff0c\u7de8\u8b6f\u5668\u7de8\u5beb\u4eba\u54e1\u548c\u82af\u7247\u5de5\u7a0b\u5e2b\u4f86\u4f7f\u4ed6\u5011\u7684\u7a0b\u5e8f\u904b\u884c\u5f97\u66f4\u5feb\u6216\u662f\u66f4\u7bc0\u80fd\uff0c\u4f46\u90a3\u500b\u6642\u4ee3\u5df2\u7d93\u7d50\u675f.\n\n\n\n\nWhile programmers could ignore the advice and rely on computer architects, compiler writers, and silicon engineers to make their programs run faster or be more energy-effi cient without change, that era is over.\n\n\n\n\n\u6211\u5011\u7684\u89c0\u9ede\u662f\uff0c\u81f3\u5c11\u5728\u672a\u4f86\u5341\u5e74\uff0c\u5982\u679c\u7a0b\u5e8f\u54e1\u5e0c\u671b\u7a0b\u5e8f\u5728\u4e26\u884c\u8a08\u7b97\u6a5f\u4e0a\u9ad8\u6548\u904b\u884c\uff0c\u5927\u591a\u6578\u7a0b\u5e8f\u54e1\u5c07\u4e0d\u5f97\u4e0d\u4e86\u89e3\u786c\u4ef6/\u8edf\u4ef6\u63a5\u53e3, \u6211\u5011\u7684\u89c0\u9ede\u662f\uff0c\u81f3\u5c11\u5728\u672a\u4f86\u7684\u5341\u5e74\u4e2d\uff0c\u5927\u591a\u6578\u7a0b\u5e8f\u54e1\u5c07\u4e0d\u5f97\u4e0d\u4e86\u89e3\u786c\u4ef6/\u8edf\u4ef6\u4e0d\u50c5\u754c\u9762\uff0c\u5982\u679c\u4ed6\u5011\u60f3\u7684\u65b9\u6848\u5728\u4e26\u884c\u8a08\u7b97\u6a5f\u4e0a\u9ad8\u6548\u904b\u884c.\n\n\n\n\nOur view is that for at least the next decade, most programmers are going to have to understand the hardware/soft ware interface if they want programs to run efficiently on parallel computers.\n\n\n\n\n1.Computer Abstractions and Technology\n\u00b6\n\n\n1.1 introduction\n\u00b6\n\n\n\u4ecb\u7d39\u96fb\u8166\n\n\n\n\npersonal computer (PC)\n\n\nServers\n\n\nsupercomputer\n\n\nembedded computer\n\n\nPersonal mobile devices (PMDs)\n\n\nCloud Computing\n\n\nSoftware as a Service (SaaS)\n\n\n\n\n\u55ae\u4f4d\n\n\n\n\n\n\n\n\nDecimal term\n\n\nAbbreviation\n\n\nValue\n\n\nBinary term\n\n\nAbbreviation\n\n\nValue\n\n\n\n\n\n\n\n\n\n\nkilobyte\n\n\nKB\n\n\n10^3\n10^3\n\n\nkibibyte\n\n\nKiB\n\n\n2^{10}\n2^{10}\n\n\n\n\n\n\nmegabyte\n\n\nMB\n\n\n10^6\n10^6\n\n\nmebibyte\n\n\nMiB\n\n\n2^{20}\n2^{20}\n\n\n\n\n\n\ngigabyte\n\n\nGB\n\n\n10^9\n10^9\n\n\ngibibyte\n\n\nGiB\n\n\n2^{30}\n2^{30}\n\n\n\n\n\n\n\n\n\n\niphone 16GB \u70ba\u4ec0\u9ebc\u88ab\u6d88\u8cbb\u8005\u8aa4\u8a8d14\"GB\"? \n\n\n\u56e0\u70ba\u5ee3\u544aiphone 16 GB ,\u4f46\u624b\u6a5f\u7cfb\u7d71\u986f\u793a\u7684\u55ae\u4f4d\u662fGib\n\n\u6839\u64da\u63db\u7b97\n\n16GB=16*\n10^9\n10^9\nBytes\n\n\n16*10^9\n16*10^9\n Bytes =\n\\frac{16*10^9}{2^{30}}\n\\frac{16*10^9}{2^{30}}\n GiB=14.9 GiB\n\n14GiB\u5c31\u662f\u9019\u6a23\u4f86\u7684\n\n\u6240\u4ee5\u55ae\u4f4d\u8981\u4e86\u89e3\u6e05\u695a\u624d\u4e0d\u6703\u7522\u751f\u8aa4\u6703",
+            "title": "The Hardware Software Interface"
+        },
+        {
+            "location": "/Computer Organization/The Hardware Software Interface/#computer-organization-and-design-the-hardwaresoftware-interface",
+            "text": "",
+            "title": "Computer Organization and Design: The Hardware/Software Interface"
+        },
+        {
+            "location": "/Computer Organization/The Hardware Software Interface/#preface",
+            "text": "",
+            "title": "Preface"
+        },
+        {
+            "location": "/Computer Organization/The Hardware Software Interface/#about-this-book",
+            "text": "\u5118\u7ba1\u7a0b\u5e8f\u54e1\u53ef\u4ee5\u5ffd\u7565\u9019\u4e9b\u5efa\u8b70\uff0c\u4e26\u4f9d\u9760\u8a08\u7b97\u6a5f\u67b6\u69cb\u5e2b\uff0c\u7de8\u8b6f\u5668\u7de8\u5beb\u4eba\u54e1\u548c\u82af\u7247\u5de5\u7a0b\u5e2b\u4f86\u4f7f\u4ed6\u5011\u7684\u7a0b\u5e8f\u904b\u884c\u5f97\u66f4\u5feb\u6216\u662f\u66f4\u7bc0\u80fd\uff0c\u4f46\u90a3\u500b\u6642\u4ee3\u5df2\u7d93\u7d50\u675f.   While programmers could ignore the advice and rely on computer architects, compiler writers, and silicon engineers to make their programs run faster or be more energy-effi cient without change, that era is over.   \u6211\u5011\u7684\u89c0\u9ede\u662f\uff0c\u81f3\u5c11\u5728\u672a\u4f86\u5341\u5e74\uff0c\u5982\u679c\u7a0b\u5e8f\u54e1\u5e0c\u671b\u7a0b\u5e8f\u5728\u4e26\u884c\u8a08\u7b97\u6a5f\u4e0a\u9ad8\u6548\u904b\u884c\uff0c\u5927\u591a\u6578\u7a0b\u5e8f\u54e1\u5c07\u4e0d\u5f97\u4e0d\u4e86\u89e3\u786c\u4ef6/\u8edf\u4ef6\u63a5\u53e3, \u6211\u5011\u7684\u89c0\u9ede\u662f\uff0c\u81f3\u5c11\u5728\u672a\u4f86\u7684\u5341\u5e74\u4e2d\uff0c\u5927\u591a\u6578\u7a0b\u5e8f\u54e1\u5c07\u4e0d\u5f97\u4e0d\u4e86\u89e3\u786c\u4ef6/\u8edf\u4ef6\u4e0d\u50c5\u754c\u9762\uff0c\u5982\u679c\u4ed6\u5011\u60f3\u7684\u65b9\u6848\u5728\u4e26\u884c\u8a08\u7b97\u6a5f\u4e0a\u9ad8\u6548\u904b\u884c.   Our view is that for at least the next decade, most programmers are going to have to understand the hardware/soft ware interface if they want programs to run efficiently on parallel computers.",
+            "title": "About This Book"
+        },
+        {
+            "location": "/Computer Organization/The Hardware Software Interface/#1computer-abstractions-and-technology",
+            "text": "",
+            "title": "1.Computer Abstractions and Technology"
+        },
+        {
+            "location": "/Computer Organization/The Hardware Software Interface/#11-introduction",
+            "text": "\u4ecb\u7d39\u96fb\u8166   personal computer (PC)  Servers  supercomputer  embedded computer  Personal mobile devices (PMDs)  Cloud Computing  Software as a Service (SaaS)   \u55ae\u4f4d     Decimal term  Abbreviation  Value  Binary term  Abbreviation  Value      kilobyte  KB  10^3 10^3  kibibyte  KiB  2^{10} 2^{10}    megabyte  MB  10^6 10^6  mebibyte  MiB  2^{20} 2^{20}    gigabyte  GB  10^9 10^9  gibibyte  GiB  2^{30} 2^{30}      iphone 16GB \u70ba\u4ec0\u9ebc\u88ab\u6d88\u8cbb\u8005\u8aa4\u8a8d14\"GB\"?   \u56e0\u70ba\u5ee3\u544aiphone 16 GB ,\u4f46\u624b\u6a5f\u7cfb\u7d71\u986f\u793a\u7684\u55ae\u4f4d\u662fGib \n\u6839\u64da\u63db\u7b97 \n16GB=16* 10^9 10^9 Bytes  16*10^9 16*10^9  Bytes = \\frac{16*10^9}{2^{30}} \\frac{16*10^9}{2^{30}}  GiB=14.9 GiB \n14GiB\u5c31\u662f\u9019\u6a23\u4f86\u7684 \n\u6240\u4ee5\u55ae\u4f4d\u8981\u4e86\u89e3\u6e05\u695a\u624d\u4e0d\u6703\u7522\u751f\u8aa4\u6703",
+            "title": "1.1 introduction"
         },
         {
             "location": "/Crypto currency/investment/",
@@ -732,7 +792,7 @@
         },
         {
             "location": "/\u91d1\u878d/\u4ea4\u6613\u8056\u7d93/",
-            "text": "\u4ea4\u6613\u8056\u7d93\n\u00b6\n\n\n1.Bankruptcy risk\n\u00b6\n\n\n\u7834\u7522\u98a8\u96aa\n\n\n\n\n\n\\left[\\frac{[1-(W-L)]}{ [1+(W-L)]} \\right]^U\n\n\n\n\n\\left[\\frac{[1-(W-L)]}{ [1+(W-L)]} \\right]^U\n\n\n\n\n\nW:\u52dd\u7387\n\nL:1-W\n\nU:\u8cc7\u91d1\u55ae\u4f4d\u6578 sample: \u8cc7\u91d1100 \u6bcf\u6b21\u6295\u6ce85 \u8cc7\u91d1\u4f4d\u6578\uff1a20 \n\n\n\n\n\u964d\u4f4e\u7834\u7522\u98a8\u96aa\n\n\n\n\n\u964d\u4f4e\u55ae\u4e00\u8cc7\u91d1\u91d1\u984d\n\n\n\u63d0\u6607\u4ea4\u6613\u65b9\u6cd5\u6e96\u78ba\u5ea6\n\n\n\u6539\u5584\u76f8\u5c0d\u5831\u511f\u6bd4\u7387(\u5e73\u5747\u7372\u5229\u76f8\u5c0d\u65bc\u8667\u640d\u6bd4\u7387)\n\n\n\n\n\n\n\u53ef\u4ee5\u5f59\u7e3d\u6210 \u8cc7\u91d1\u7ba1\u7406&\u671f\u671b\u503c\n\n\n2.\u671f\u671b\u503c\n\u00b6\n\n\n\n\n\n\\left[\u7372\u5229\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]-\\left[\u8667\u640d\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]\n\n\n\n\n\\left[\u7372\u5229\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]-\\left[\u8667\u640d\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]\n\n\n\n\n\n\u671f\u671b\u503c\u4e00\u6a23\u4f46\u7834\u7522\u98a8\u96aa\u8d8a\u4f4e\u8d8a\u597d",
+            "text": "\u4ea4\u6613\u8056\u7d93\n\u00b6\n\n\n1.Bankruptcy risk\n\u00b6\n\n\n\u7834\u7522\u98a8\u96aa\n\n\n\n\n\n\\left[\\frac{[1-(W-L)]}{ [1+(W-L)]} \\right]^U\n\n\n\n\n\\left[\\frac{[1-(W-L)]}{ [1+(W-L)]} \\right]^U\n\n\n\n\n\nW:\u52dd\u7387\n\nL:1-W\n\nU:\u8cc7\u91d1\u55ae\u4f4d\u6578 sample: \u8cc7\u91d1100 \u6bcf\u6b21\u6295\u6ce85 \u8cc7\u91d1\u4f4d\u6578\uff1a20 \n\n\n\n\n\u964d\u4f4e\u7834\u7522\u98a8\u96aa\n\n\n\n\n\u964d\u4f4e\u55ae\u4e00\u8cc7\u91d1\u91d1\u984d\n\n\n\u63d0\u6607\u4ea4\u6613\u65b9\u6cd5\u6e96\u78ba\u5ea6\n\n\n\u6539\u5584\u76f8\u5c0d\u5831\u511f\u6bd4\u7387(\u5e73\u5747\u7372\u5229\u76f8\u5c0d\u65bc\u8667\u640d\u6bd4\u7387)\n\n\n\n\n\n\n\u53ef\u4ee5\u5f59\u7e3d\u6210 \u8cc7\u91d1\u7ba1\u7406&\u671f\u671b\u503c\n\n\n2.\u671f\u671b\u503c\n\u00b6\n\n\n\n\n\n\\left[\u7372\u5229\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]-\\left[\u8667\u640d\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u8667\u640d}{ \u5e73\u5747\u8667\u640d} \\right]\n\n\n\n\n\\left[\u7372\u5229\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]-\\left[\u8667\u640d\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u8667\u640d}{ \u5e73\u5747\u8667\u640d} \\right]\n\n\n\n\n\n\u671f\u671b\u503c\u4e00\u6a23\u4f46\u7834\u7522\u98a8\u96aa\u8d8a\u4f4e\u8d8a\u597d",
             "title": "\u4ea4\u6613\u8056\u7d93"
         },
         {
@@ -747,7 +807,7 @@
         },
         {
             "location": "/\u91d1\u878d/\u4ea4\u6613\u8056\u7d93/#2",
-            "text": "\\left[\u7372\u5229\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]-\\left[\u8667\u640d\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]  \n\\left[\u7372\u5229\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]-\\left[\u8667\u640d\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]   \u671f\u671b\u503c\u4e00\u6a23\u4f46\u7834\u7522\u98a8\u96aa\u8d8a\u4f4e\u8d8a\u597d",
+            "text": "\\left[\u7372\u5229\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]-\\left[\u8667\u640d\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u8667\u640d}{ \u5e73\u5747\u8667\u640d} \\right]  \n\\left[\u7372\u5229\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u7372\u5229}{ \u5e73\u5747\u8667\u640d} \\right]-\\left[\u8667\u640d\u6a5f\u7387 \\times \\frac{\u5e73\u5747\u8667\u640d}{ \u5e73\u5747\u8667\u640d} \\right]   \u671f\u671b\u503c\u4e00\u6a23\u4f46\u7834\u7522\u98a8\u96aa\u8d8a\u4f4e\u8d8a\u597d",
             "title": "2.\u671f\u671b\u503c"
         }
     ]

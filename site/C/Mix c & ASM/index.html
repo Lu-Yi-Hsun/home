@@ -1004,8 +1004,9 @@
 </li>
 <li>
 <p>搜尋實做的函數 </p>
-<div class="codehilite"><pre><span></span><span class="n">SYSCALL_DEFINEx</span><span class="p">(</span><span class="n">function_name</span><span class="p">,....){...}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">SYSCALL_DEFINEx</span><span class="p">(</span><span class="n">function_name</span><span class="p">,....){...}</span>
 </pre></div>
+</td></tr></table>
 
 <p>function_name:write</p>
 <p>x:這個編號不一定</p>
@@ -1019,11 +1020,15 @@
 fd %rdi</br>
 buf %rsi</br>
 count %rdx</br>
-<div class="codehilite"><pre><span></span><span class="n">SYSCALL_DEFINE3</span><span class="p">(</span><span class="n">write</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span><span class="p">,</span> <span class="n">fd</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="n">__user</span> <span class="o">*</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span><span class="kt">size_t</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">SYSCALL_DEFINE3</span><span class="p">(</span><span class="n">write</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span><span class="p">,</span> <span class="n">fd</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="n">__user</span> <span class="o">*</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span><span class="kt">size_t</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="n">ksys_write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div></p>
+</pre></div>
+</td></tr></table></p>
 </div>
 <p>根據上面答案建立此表格</p>
 <p>表格1-1</p>
@@ -1065,7 +1070,22 @@ count %rdx</br>
 <p><a href="https://stackoverflow.com/questions/5256599/what-are-file-descriptors-explained-in-simple-terms/5257718#5257718">"mov $1, %%rdi\n"</a></p>
 <div class="admonition print">
 <p class="admonition-title">Print</p>
-<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">print_asm</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">arg1</span><span class="p">,</span><span class="kt">long</span> <span class="kt">int</span> <span class="n">size</span><span class="p">){</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">print_asm</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">arg1</span><span class="p">,</span><span class="kt">long</span> <span class="kt">int</span> <span class="n">size</span><span class="p">){</span> 
     <span class="n">__asm__</span> <span class="p">(</span>
         <span class="s">&quot;mov $1, %%rax</span><span class="se">\n</span><span class="s">&quot;</span><span class="c1">//system call 編碼</span>
         <span class="s">&quot;mov $1, %%rdi</span><span class="se">\n</span><span class="s">&quot;</span><span class="c1">//fd 設定1 代表把字串輸入/dev/stdout 這裡就是螢幕輸出地方</span>
@@ -1082,6 +1102,7 @@ count %rdx</br>
 <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 </div>
 <h3 id="c-asm">C &amp; ASM混和編譯<a class="headerlink" href="#c-asm" title="Permanent link">&para;</a></h3>
